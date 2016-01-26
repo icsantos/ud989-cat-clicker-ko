@@ -1,5 +1,6 @@
 var ViewModel = function() {
   this.catName = ko.observable('Sleepy');
+  this.catNicknames = ko.observableArray(['Ming-ming', 'Boss Miaowok', 'Kuting']);
   this.catClicks = ko.observable(0);
   this.catLevel = ko.computed(function() {
     if (this.catClicks() < 5) {
