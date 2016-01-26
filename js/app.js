@@ -17,8 +17,8 @@ var Cat = function() {
 var ViewModel = function() {
   this.currentCat = ko.observable(new Cat());
   
-  this.addClick = function() {
-    this.currentCat().catClicks(this.currentCat().catClicks() + 1);
+  this.currentCat().addClick = function() {
+    this.catClicks(this.catClicks() + 1);
   };
 }
 
