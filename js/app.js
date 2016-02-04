@@ -39,6 +39,16 @@ var ViewModel = function() {
   
   this.currentCat = ko.observable(this.catList()[0]);
   
+  this.updateCat = function(index) {
+    console.log(index);
+    self.currentCat = ko.observable(self.catList()[index]);
+  };
+  
+  this.selectCat = function(cat) {
+    console.log(cat);
+    this.currentCat = ko.observable(cat);
+  };
+  
   this.addClick = function() {
     self.currentCat().catClicks(self.currentCat().catClicks() + 1);
   };
