@@ -5,13 +5,8 @@
     <title>Cat Clicker</title>
 </head>
 <body>
-    <div id="cat-list">
-      <ul data-bind="foreach: initialCats">
-        <a href="#" data-bind="click: $parent.updateCat.bind($data, $index())"><li data-bind="text: $data.catName"></li></a>
-      </ul>
-    </div>
-    <div id="catList" data-bind="foreach: initialCats">
-      <input type="button" data-bind="click: $parent.selectCat, attr: {value: $data.catName}"></input>
+    <div id="catList" data-bind="foreach: catList">
+      <input type="button" data-bind="click: $parent.selectCat, attr: {value: catName}"></input>
     </div>
 
     <div id="cat" data-bind="with: currentCat">
